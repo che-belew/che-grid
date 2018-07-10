@@ -1,6 +1,6 @@
 """Test the `met` module."""
 
-from hugs.calc import get_wind_dir, get_wind_speed
+from hugs.calc import get_wind_dir, get_wind_speed, get_wind_components
 
 import numpy as np
 from numpy.testing import assert_almost_equal, assert_array_almost_equal
@@ -35,3 +35,10 @@ def test_dir():
     true_dir = np.array([270., 225., 180., 270.])
 
     assert_array_almost_equal(true_dir, direc, 4)
+
+
+def test_wind_comps_scalar():
+    """Test if u and v are scalar"""
+    u, v = get_wind_components(8, 15)
+    assert_almost_equal(u, -2.0705, 4)
+    assert_almost_equal(v, -7.7274066, 4)
