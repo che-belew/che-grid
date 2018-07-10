@@ -3,12 +3,12 @@ sudo: false
 
 branches:
     only:
-	-master
+      -master
 python:
-    -3.6
+  -3.6
 
 install:
-    -pip install .
+  -pip install .
 
 script:
-    -pytest
+  -pytest
