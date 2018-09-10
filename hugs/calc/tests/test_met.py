@@ -40,5 +40,5 @@ def test_dir():
 def test_wind_comps_scalar():
     """Test if u and v are scalar"""
     u, v = get_wind_components(8, 15)
-    assert_almost_equal(u, -2.0705, 4)
+    assert_almost_equal(u, -2.0705, 3)
     assert_almost_equal(v, -7.7274066, 4)
