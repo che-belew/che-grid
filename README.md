@@ -1,2 +1,2 @@
 # che-grid
-Test Open Source 
+Practice Open Source from SciPy2018
